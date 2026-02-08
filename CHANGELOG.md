@@ -1,3 +1,13 @@
+# Changelog
+
+## 9.2.0 (unreleased)
+
+### Dependencies
+
+- **edge-lexer**: Updated to 6.1.0 which adds `indent: number` to tag tokens. No parser code changes required — the parser transparently passes through the new field to downstream consumers.
+
+---
+
 <a name="2.0.3"></a>
 
 ## [2.0.3](https://github.com/edge-js/parser/compare/v2.0.2...v2.0.3) (2018-11-09)
