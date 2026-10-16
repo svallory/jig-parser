@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.png" width="128" alt="Jig logo" />
+</p>
+
 # edge-parser
 > Parser to convert edge templates to invokable functions
 

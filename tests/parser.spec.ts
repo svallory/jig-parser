@@ -14,7 +14,7 @@ import dedent from 'dedent-js'
 import { test } from '@japa/runner'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
-import type { MustacheToken, TagToken } from 'edge-lexer/types'
+import type { MustacheToken, TagToken } from '@jig-lang/lexer/types'
 
 import { Parser } from '../src/parser/main.js'
 import { EdgeBuffer } from '../src/edge_buffer/index.js'
