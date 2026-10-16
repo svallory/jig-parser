@@ -1,15 +1,15 @@
 /*
  * edge-parser
  *
- * (c) Harminder Virk <virk@adonisjs.com>
+ * (c) Jig
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
 import { EOL } from 'node:os'
-import { Tokenizer, MustacheTypes, TagTypes } from 'edge-lexer'
-import type { Token, TagToken, MustacheToken } from 'edge-lexer/types'
+import { Tokenizer, MustacheTypes, TagTypes } from '@jig-lang/lexer'
+import type { Token, TagToken, MustacheToken } from '@jig-lang/lexer/types'
 
 import { Stack } from '../stack/index.js'
 import { stringify } from './stringify.js'
@@ -106,7 +106,8 @@ export class Parser {
      * Since `jsArg` can span over multiple lines, we split it into multiple lines
      * and write one line at a time to maintain the original shape.
      */
-    const lines = `@${token.properties.name}(${token.properties.jsArg})`.split('\n')
+    const suffix = token.properties.contentType ? `: ${token.properties.contentType}` : ''
+    const lines = `@${token.properties.name}(${token.properties.jsArg})${suffix}`.split('\n')
     lines.forEach((line) => buffer.outputRaw(line))
 
     /**
