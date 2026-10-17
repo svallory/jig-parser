@@ -5,7 +5,7 @@
     "": {
       "name": "edge-parser",
       "dependencies": {
-        "@jig-lang/lexer": "^1.0.0",
+        "@jig-lang/lexer": "^1.1.0",
         "acorn": "^8.15.0",
         "astring": "^1.9.0",
         "edge-error": "^4.0.2",
@@ -153,7 +153,7 @@
 
     "@jest/schemas": ["@jest/schemas@30.0.5", "", { "dependencies": { "@sinclair/typebox": "^0.34.0" } }, "sha512-DmdYgtezMkh3cpU8/1uyXakv3tJRcmcXxBOcO0tbaozPwpmh4YMsnWrQm9ZmZMfa5ocbxzbFk6O4bDPEc/iAnA=="],
 
-    "@jig-lang/lexer": ["@jig-lang/lexer@1.0.1", "", { "dependencies": { "edge-error": "^4.0.2" } }, "sha512-yInxc1XAJF3I/nQQUqvSZlCdQZwTJ6oRSiDH4u0oLQ3MFGgX5QSGyl7UvmBGn5JDgU7DhY8TxvFQ1VXTqcx8Kg=="],
+    "@jig-lang/lexer": ["@jig-lang/lexer@1.1.0", "", { "dependencies": { "edge-error": "^4.0.2" } }, "sha512-8J8aTIjcQeZHudrxZ3xrDNCjJRJfZPbG8Cpa8RXqnyFJt99JSx3l0dacWQdNVauvTMf/Vv466Drnqavmk0AIAA=="],
 
     "@jridgewell/gen-mapping": ["@jridgewell/gen-mapping@0.3.13", "", { "dependencies": { "@jridgewell/sourcemap-codec": "^1.5.0", "@jridgewell/trace-mapping": "^0.3.24" } }, "sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA=="],
 

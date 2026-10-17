@@ -57,7 +57,7 @@
     "acorn": "^8.15.0",
     "astring": "^1.9.0",
     "edge-error": "^4.0.2",
-    "@jig-lang/lexer": "^1.0.0",
+    "@jig-lang/lexer": "^1.1.0",
     "js-stringify": "^1.0.2"
   },
   "homepage": "https://github.com/svallory/jig#readme",
