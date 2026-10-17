@@ -1,7 +1,7 @@
 {
-  "name": "edge-parser",
-  "description": "Parser for edge template engine",
-  "version": "9.1.0",
+  "name": "@jig-lang/parser",
+  "description": "Parser for the Jig template engine. Forked from Edge.js by Harminder Virk.",
+  "version": "1.0.0",
   "engines": {
     "node": ">=18.16.0"
   },
@@ -57,27 +57,32 @@
     "acorn": "^8.15.0",
     "astring": "^1.9.0",
     "edge-error": "^4.0.2",
-    "edge-lexer": "^6.0.4",
+    "@jig-lang/lexer": "^1.1.0",
     "js-stringify": "^1.0.2"
   },
-  "homepage": "https://github.com/edge-js/parser#readme",
+  "homepage": "https://github.com/svallory/jig#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edge-js/parser.git"
+    "url": "git+https://github.com/svallory/jig.git",
+    "directory": "parser"
   },
   "bugs": {
-    "url": "https://github.com/edge-js/parser/issues"
+    "url": "https://github.com/svallory/jig/issues"
   },
   "keywords": [
-    "edge",
+    "jig",
     "template",
-    "template-engine"
+    "template-engine",
+    "parser",
+    "code-generation"
   ],
-  "author": "Harminder Virk <virk@adonisjs.com>",
+  "author": "Saulo Vallory",
+  "contributors": [
+    "Harminder Virk <virk@adonisjs.com>"
+  ],
   "license": "MIT",
   "publishConfig": {
-    "access": "public",
-    "provenance": true
+    "access": "public"
   },
   "tsdown": {
     "entry": [

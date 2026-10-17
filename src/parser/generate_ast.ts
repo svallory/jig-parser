@@ -1,14 +1,14 @@
 /*
  * edge-parser
  *
- * (c) Harminder Virk <virk@adonisjs.com>
+ * (c) Jig
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
 import { EdgeError } from 'edge-error'
-import type { LexerLoc } from 'edge-lexer/types'
+import type { LexerLoc } from '@jig-lang/lexer/types'
 import { parse as acornParse, type Token } from 'acorn'
 
 import { type AcornLoc } from '../types.js'

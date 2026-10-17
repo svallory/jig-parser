@@ -1,13 +1,13 @@
 /*
  * edge-parser
  *
- * (c) Harminder Virk <virk@adonisjs.com>
+ * (c) Jig
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-import type { TagToken, LexerTagDefinitionContract, MustacheToken } from 'edge-lexer/types'
+import type { TagToken, LexerTagDefinitionContract, MustacheToken } from '@jig-lang/lexer/types'
 
 import { type Parser } from './parser/main.js'
 import { type EdgeBuffer } from './edge_buffer/index.js'
