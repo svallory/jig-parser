@@ -1,5 +1,5 @@
 /*
- * edge-parser
+ * @jig-lang/parser
  *
  * (c) Jig
  *

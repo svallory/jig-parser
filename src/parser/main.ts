@@ -1,5 +1,5 @@
 /*
- * edge-parser
+ * @jig-lang/parser
  *
  * (c) Jig
  *
@@ -26,7 +26,7 @@ import {
 
 /**
  * Edge parser converts template strings to an invokable function. This module
- * uses [edge-lexer](https://github.com/edge-js/lexer) to generate a list
+ * uses [@jig-lang/lexer](https://github.com/svallory/jig-lexer) to generate a list
  * of tokens and process them against [acorn](https://npm.im/acorn).
  *
  * Edge has concepts of Tags, which are not implemented by this module and must
@@ -98,8 +98,10 @@ export class Parser {
   }
 
   /**
-   * Process escaped tag token by writing it as it is. However, the children
-   * inside a tag are still processed.
+   * Process escaped tag token by writing it as it is, including a content type
+   * suffix (`: markdown`) when the tag has one. However, the children inside
+   * a tag are still processed. A trailing `~` after the suffix is not preserved,
+   * since the lexer does not record it on the token.
    */
   #processEscapedTagToken(token: TagToken, buffer: EdgeBuffer) {
     /**

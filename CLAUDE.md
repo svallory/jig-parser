@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**edge-parser** converts Edge template strings into executable JavaScript function bodies. It takes lexer tokens (from `edge-lexer`), parses JavaScript expressions via **Acorn**, transforms the AST to prefix unknown variables with `state.`, and generates JavaScript code via **astring**. Published as `edge-parser` on npm.
+**@jig-lang/parser** converts Edge template strings into executable JavaScript function bodies. It takes lexer tokens (from `@jig-lang/lexer`), parses JavaScript expressions via **Acorn**, transforms the AST to prefix unknown variables with `state.`, and generates JavaScript code via **astring**. Published as `@jig-lang/parser` on npm.
 
 Dependency chain: lexer → **parser** → jig (this is the middle package).
 
@@ -64,8 +64,8 @@ Testing uses **Japa** (`@japa/runner`) with `@japa/assert`. Config is in `bin/te
 ### Exports
 
 ```
-edge-parser       → Parser, Stack, EdgeBuffer, expressions (name map)
-edge-parser/types → ParserTagDefinitionContract, ParserOptions, AcornLoc
+@jig-lang/parser       → Parser, Stack, EdgeBuffer, expressions (name map)
+@jig-lang/parser/types → ParserTagDefinitionContract, ParserOptions, AcornLoc
 ```
 
 ### Test Fixtures
