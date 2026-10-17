@@ -438,4 +438,43 @@ test.group('Parser', () => {
 
     tokens.forEach((token) => parser.processToken(token, buffer))
   })
+  test('keep the content type suffix on escaped tags', ({ assert }) => {
+    const parser = new Parser(tags, undefined, {
+      statePropertyName: 'state',
+      escapeCallPath: ['ctx', 'escape'],
+    })
+
+    const buffer = new EdgeBuffer('eval.edge', {
+      outputVar: 'out',
+      rethrowCallPath: ['ctx', 'reThrow'],
+    })
+
+    const tokens = parser.tokenize('@@if(foo): markdown\n  hello\n@end', {
+      filename: 'eval.edge',
+    })
+    tokens.forEach((token) => parser.processToken(token, buffer))
+
+    assert.include(buffer.flush(), 'out += "@if(foo): markdown";')
+  })
+
+  test('escaped tags without a suffix are written as before', ({ assert }) => {
+    const parser = new Parser(tags, undefined, {
+      statePropertyName: 'state',
+      escapeCallPath: ['ctx', 'escape'],
+    })
+
+    const buffer = new EdgeBuffer('eval.edge', {
+      outputVar: 'out',
+      rethrowCallPath: ['ctx', 'reThrow'],
+    })
+
+    const tokens = parser.tokenize('@@if(foo)\n  hello\n@end', {
+      filename: 'eval.edge',
+    })
+    tokens.forEach((token) => parser.processToken(token, buffer))
+
+    const output = buffer.flush()
+    assert.include(output, 'out += "@if(foo)";')
+    assert.notInclude(output, ': ')
+  })
 })

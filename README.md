@@ -2,7 +2,7 @@
   <img src="logo.png" width="128" alt="Jig logo" />
 </p>
 
-# edge-parser
+# @jig-lang/parser
 > Parser to convert edge templates to invokable functions
 
 [![gh-workflow-image]][gh-workflow-url] [![npm-image]][npm-url] ![][typescript-image] [![license-image]][license-url]
@@ -53,16 +53,16 @@ This repo is the **parser to convert edge templates** to a self invoked Javascri
 Install the package from npm registry as follows:
 
 ```sh
-npm i edge-parser
+npm i @jig-lang/parser
 
 # yarn
-yarn add edge-parser
+bun add @jig-lang/parser
 ```
 
 and then use it as follows
 
 ```js
-import { Parser, EdgeBuffer, Stack } from 'edge-parser'
+import { Parser, EdgeBuffer, Stack } from '@jig-lang/parser'
 
 const filename = 'eval.edge'
 
@@ -173,7 +173,7 @@ parser.utils.transformAst(parser.utils.generateAST('2 + 2', loc, filename), file
 
 #### tokenize (template, options: { filename })
 
-Returns an array of [lexer tokens](https://github.com/edge-js/lexer) for the given template. The method is a shortcut to self import the lexer module and then generating tokens.
+Returns an array of [lexer tokens](https://github.com/svallory/jig-lexer) for the given template. The method is a shortcut to self import the lexer module and then generating tokens.
 
 ```ts
 const tokens = parser.tokenize('Hello {{ username }}', {
@@ -257,7 +257,7 @@ and then use it as
 The following expressions are supported by the parser. Can you also access the list of supported expressions as
 
 ```js
-import { expressions } from 'edge-parser'
+import { expressions } from '@jig-lang/parser'
 ```
 
 #### Identifier
@@ -433,13 +433,13 @@ Support for update expression
 ```
 
 
-[gh-workflow-image]: https://img.shields.io/github/actions/workflow/status/edge-js/parser/checks.yml?style=for-the-badge
-[gh-workflow-url]: https://github.com/edge-js/parser/actions/workflows/checks.yml "Github action"
+[gh-workflow-image]: https://img.shields.io/github/actions/workflow/status/svallory/jig-parser/checks.yml?style=for-the-badge
+[gh-workflow-url]: https://github.com/svallory/jig-parser/actions/workflows/checks.yml "Github action"
 
-[npm-image]: https://img.shields.io/npm/v/edge-parser.svg?style=for-the-badge&logo=npm
-[npm-url]: https://npmjs.org/package/edge-parser 'npm'
+[npm-image]: https://img.shields.io/npm/v/@jig-lang/parser.svg?style=for-the-badge&logo=npm
+[npm-url]: https://www.npmjs.com/package/@jig-lang/parser 'npm'
 
 [typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
 
 [license-url]: LICENSE.md
-[license-image]: https://img.shields.io/github/license/edge-js/lexer?style=for-the-badge
+[license-image]: https://img.shields.io/github/license/svallory/jig-parser?style=for-the-badge
