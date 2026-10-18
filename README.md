@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This repository is archived. Development continues in the monorepo [hyperlab-sh/jig](https://github.com/hyperlab-sh/jig/tree/main/packages/parser), which keeps the full history.
+
 <p align="center">
   <img src="logo.png" width="128" alt="Jig logo" />
 </p>
